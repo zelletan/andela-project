@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Management App</title>
+	<link rel="stylesheet" href="/css/bootstrap.css" />
+	<link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" href="../images/img3.jpg">
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/delete.js"></script>
+</head>
+<body>
+	<div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            {{#if user}}
+                <li role="presentation"><a href="/">Dashboard</a></li>
+                <li role="presentation"><a href="/users/logout">Logout</a></li>
+                <li role="presentation"><a href="/users/student">view all profiles</a></li>
+            {{else}}
+              <li role="presentation"><a href="/users/login">Login</a></li>
+                <li role="presentation"><a href="/users/home">Home</a></li>
+              <li role="presentation"><a href="/users/register">Register</a></li>
+            {{/if}}
+          </ul>
+        </nav>
+        <h3 class="text-muted">Student Management App</h3>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-12">
+          {{#if success_msg}}
+            <div class="alert alert-success">{{success_msg}}</div>
+          {{/if}}
+
+          {{#if error_msg}}
+            <div class="alert alert-danger">{{error_msg}}</div>
+          {{/if}}
+
+          {{#if error}}
+            <div class="alert alert-danger">{{error}}</div>
+          {{/if}}
+          
+          {{{body}}}
+        </div>
+
+        
+      </div>
+
+      <footer class="footer">
+        <p>&copy; 2017 Student Management App, Inc.</p>
+      </footer>
+
+    </div> <!-- /container -->
+</body>
+</html>

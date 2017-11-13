@@ -1,0 +1,23 @@
+{{#if user}}
+<div class="jumbotron">
+    <h1>Below is list of registered students </h1>
+</div>
+<div class="page-heading">
+    <div class="panel-title">
+        <h3>Profile Information</h3>
+    </div>
+
+    {{# each User}}
+        <div class="thumbnail">
+            <div class="caption">
+                <h3>{{this.fullname}}</h3>
+                <h3>{{this.username}}</h3>
+                <h3>{{this.address}}</h3>
+            </div>
+            <button class="btn btn-danger student_delete" data-id="{{this._id}}"> Delete</button>
+        </div>
+    {{/each}}
+
+
+</div>
+{{/if}}

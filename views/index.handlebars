@@ -1,0 +1,19 @@
+ <h2 class="page-header">Dashboard</h2>
+<p>Welcome to your dashboard</p>
+ {{#if user}}
+     <div class="jumbotron">
+         <h1>Below is your School profile information </h1>
+     </div>
+     <div class="page-heading">
+         <div class="panel-title">
+             <h3>Profile Information</h3>
+         </div>
+         <div class="panel-body">
+             <p>Fullname: {{user.fullname}}</p>
+             <p>Address: {{user.address}}</p>
+             <p>Phone number: {{user.studentphoneNumber}}</p>
+             <p>Parent Contact: {{user.parentcontact}}</p>
+             <p>School Username: {{user.username}}</p>
+         </div>
+     </div>
+ {{/if}}
